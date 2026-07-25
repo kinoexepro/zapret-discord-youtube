@@ -2,6 +2,10 @@
 
 # <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=28 /> <a href="https://github.com/Flowseal/">Flowseal</a><a href="https://github.com/Flowseal/zapret-discord-youtube">/zapret-discord-youtube</a> <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" height=28 />
 
+**NEW 2026**: 🟣 **Neon Zapret GUI** — красивый черно‑фиолетовый Windows 11 интерфейс с закругленными карточками, плавными эффектами и подписью **made by neonchik**.  
+**Быстрый старт**: запускайте `Start Neon Zapret GUI.bat`, выбирайте стратегию и нажимайте **Запустить выбранную**.  
+**EXE/архив**: `build-neon-gui-exe.ps1` собирает `NeonZapret.exe` и `NeonZapret-Windows11-2026.zip` локально на Windows 11.  
+
 **NEW**: Ускорение Telegram Desktop - https://github.com/Flowseal/tg-ws-proxy  
 Альтернатива https://github.com/bol-van/zapret-win-bundle  
 Также вы можете материально поддержать оригинального разработчика zapret [тут](https://github.com/bol-van/zapret?tab=readme-ov-file#%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0)
@@ -45,9 +49,35 @@
 
 4. Распакуйте содержимое архива по пути, который не содержит кириллицу/спец. символы
 
-5. Запустите нужный файл
+5. Рекомендуемый вариант для Windows 11: запустите **`Start Neon Zapret GUI.bat`** и выберите стратегию в красивом интерфейсе. Если хотите старый режим, запускайте нужный `general*.bat` или `service.bat` вручную.
+
+## 🟣 Neon Zapret GUI 2026
+
+В комплект добавлен современный Windows 11 интерфейс **Neon Zapret 2026** в черно‑фиолетовом стиле с закругленными карточками, плавным появлением окна, neon hover‑эффектами и подписью **made by neonchik**.
+
+### Быстрый запуск
+
+1. Распакуйте архив в папку без кириллицы и спецсимволов.
+2. Запустите `Start Neon Zapret GUI.bat`.
+3. Выберите стратегию `general*.bat` и нажмите **Запустить выбранную**. Windows запросит права администратора, потому что WinDivert и службы требуют elevated‑режим.
+
+### EXE и архив
+
+Если нужен именно `NeonZapret.exe`, запустите на Windows 11:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build-neon-gui-exe.ps1
+```
+
+Скрипт соберет `NeonZapret.exe` стандартным компилятором .NET Framework из Windows и создаст архив `NeonZapret-Windows11-2026.zip`, который можно просто распаковать и запустить. Готовый архив больше не хранится в репозитории, чтобы GitHub спокойно создавал PR.
 
 ## ℹ️Краткие описания файлов
+
+- [**`Start Neon Zapret GUI.bat`**](./Start%20Neon%20Zapret%20GUI.bat) - рекомендуемый запуск нового красивого GUI. Открывает `NeonZapret.ps1` без ручного ввода команд PowerShell.
+
+- [**`NeonZapret.ps1`**](./NeonZapret.ps1) - современный черно‑фиолетовый Windows 11 лаунчер: список стратегий, запуск от администратора, остановка zapret, статус, быстрый доступ к `service.bat`, README и папке проекта.
+
+- [**`build-neon-gui-exe.ps1`**](./build-neon-gui-exe.ps1) - локальная сборка `NeonZapret.exe` и архива `NeonZapret-Windows11-2026.zip` на Windows 11. Сам архив не добавляется в git, чтобы не ломать создание PR на GitHub.
 
 - [**`general.bat ...`**](./general.bat) - запуск стратегии вручную
 
