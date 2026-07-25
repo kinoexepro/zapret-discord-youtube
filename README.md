@@ -78,6 +78,27 @@
     - `DPI checkers` - проверка DPI на различных провайдерах (Cloudflare, Amazon и др.)
 
 
+
+## 🟣 Neon Zapret GUI 2026
+
+В комплект добавлен современный Windows 11 интерфейс **Neon Zapret 2026** в черно‑фиолетовом стиле с закругленными карточками, плавным появлением окна, neon hover‑эффектами и подписью **made by neonchik**.
+
+### Быстрый запуск
+
+1. Распакуйте архив в папку без кириллицы и спецсимволов.
+2. Запустите `Start Neon Zapret GUI.bat`.
+3. Выберите стратегию `general*.bat` и нажмите **Запустить выбранную**. Windows запросит права администратора, потому что WinDivert и службы требуют elevated‑режим.
+
+### EXE и архив
+
+Если нужен именно `NeonZapret.exe`, запустите на Windows 11:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\build-neon-gui-exe.ps1
+```
+
+Скрипт соберет `NeonZapret.exe` стандартным компилятором .NET Framework из Windows и создаст архив `NeonZapret-Windows11-2026.zip`, который можно просто распаковать и запустить.
+
 ## ☑️Распространенные вопросы и проблемы
 
 ### После запуска скрипта `general*` ничего не происходит
